@@ -1,0 +1,28 @@
+*.swp
+
+# Ignore everything...
+/*
+/*/
+# ... except:
+
+
+# Bash
+!.bash_aliases
+!.bash_profile
+!.bashrc
+!.profile
+
+
+# Git
+!.gitconfig
+!.gitignore
+
+.gitignore.*
+
+
+# Key rebindings
+!.Xmodmap
+
+
+# Vim
+!.vimrc
