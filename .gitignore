@@ -20,6 +20,10 @@
 .gitignore.*
 
 
+# Shell scripts
+!sync.sh
+
+
 # Key rebindings
 !.Xmodmap
 
