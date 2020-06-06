@@ -7,8 +7,6 @@
                    __/ |                                                 
                   |___/                                                  
 
-Yes I am that childish
-
 My Linux dotfiles. Initialise the repo using the following shell command set:
 
     cd &&
