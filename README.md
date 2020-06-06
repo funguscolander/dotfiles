@@ -9,11 +9,19 @@
 
 Yes I am that childish
 
-My Linux dotfiles. Initialise the repo using the following shell command:
+My Linux dotfiles. Initialise the repo using the following shell command set:
+
+    cd &&
+    git clone https://github.com/C-Fergus/dotfiles.git &&
+    bash ~/dotfiles/runonce.sh
+
+This will pull the repo into a folder in your home directory (~) named "dotfiles" and run the interactive new install script to make symbolic links of all necessary files in ~, as well as installing from the default app list in 'aptgetInstall.sh', which can be edited before running.
+Alternatively, the files can pulled directly into a repo in the home directory using the following command set:
 
     cd ~ &&
     git init &&
     git remote add origin https://github.com/C-Fergus/dotfiles.git &&
-    git pull origin master
+    git pull origin master &&
+    bash aptgetInstall.sh
 
-This will pull the repo into your home directory, allowing them to be used immediately. I will change this so that it will create a symbolic link to the files in the home directory while the repo can be stored in ~/dotfiles/ when I am finished creating them.
+This will pull the repo directly into ~ allowing them to be used immediately, as well as running the installation script.
