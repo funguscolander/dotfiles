@@ -16,4 +16,4 @@ My Linux dotfiles. Initialise the repo using the following shell command:
     git remote add origin https://github.com/C-Fergus/dotfiles.git &&
     git pull origin master
 
-This will pull the repo into your home directory, allowing them to be used immediately.
+This will pull the repo into your home directory, allowing them to be used immediately. I will change this so that it will create a symbolic link to the files in the home directory while the repo can be stored in ~/dotfiles/ when I am finished creating them.
