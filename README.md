@@ -6,6 +6,7 @@
     |_|  \___|_|  \__, |\__,_|___/   |_____/ \___/ \__|_| |_|_|\___||___/
                    __/ |                                                 
                   |___/                                                  
+    Courtesy of http://patorjk.com/software/taag
 
 My Linux dotfiles. Initialise the repo using the following shell command set:
 
