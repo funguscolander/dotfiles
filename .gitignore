@@ -6,6 +6,12 @@
 # ... except:
 
 
+# .config
+!/.config/
+!/.config/git/
+!/.config/git/gitk
+
+
 # Bash
 !.bash_aliases
 !.bash_profile
