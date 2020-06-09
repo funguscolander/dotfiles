@@ -16,6 +16,7 @@
 # Git
 !.gitconfig
 !.gitignore
+!/.config/git/gitk
 
 .gitignore.*
 
