@@ -1,0 +1,3 @@
+! Set 256 colour mode
+XTerm.termName: xterm-256color
+

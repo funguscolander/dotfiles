@@ -31,3 +31,6 @@
 
 # Vim
 !.vimrc
+
+# XTerminal
+!.Xresources
