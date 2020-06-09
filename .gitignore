@@ -21,6 +21,7 @@
 
 
 # Shell scripts
+!setup.sh
 !sync.sh
 
 
