@@ -8,7 +8,7 @@ mygcl () { git clone git@github.com:C-Fergus/"$1".git ; }							# Clone my repo.
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit'
-alias gcm='git commit -m'
+gcm () { git commit -m "$1" ; }
 alias gd='git diff'
 alias gk='gitk --all&'
 alias gp='git push'

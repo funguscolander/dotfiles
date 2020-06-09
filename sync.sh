@@ -6,3 +6,5 @@ ln -svf ~/dotfiles/.gitconfig ~
 ln -svf ~/dotfiles/.profile ~
 ln -svf ~/dotfiles/.vimrc ~
 ln -svf ~/dotfiles/.Xmodmap ~
+ln -svf ~/dotfiles/.Xresources ~
+
