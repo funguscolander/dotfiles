@@ -5,7 +5,7 @@
     # Enable colours in colour-supporting terminals
     ui = auto
 [core]
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.config/git/ignore
     editor = vim
 [github]
     user = C-Fergus

@@ -6,10 +6,10 @@
 # ... except:
 
 
-# .config
+# Directories
 !/.config/
 !/.config/git/
-!/.config/git/gitk
+!/.config/git/
 
 
 # Bash
@@ -22,6 +22,7 @@
 # Git
 !.gitconfig
 !.gitignore
+!/.config/git/ignore
 !/.config/git/gitk
 
 .gitignore.*
