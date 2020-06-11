@@ -16,6 +16,8 @@
 !.bash_aliases
 !.bash_profile
 !.bashrc
+# Technically for GNU readline library applications, but that's basically only bash
+!.inputrc
 !.profile
 
 
