@@ -10,6 +10,7 @@
 !/.config/
 !/.config/git/
 !/.config/git/
+!/bin/
 
 
 # Bash
@@ -19,6 +20,10 @@
 # Technically for GNU readline library applications, but that's basically only bash
 !.inputrc
 !.profile
+
+
+# Binaries
+!/bin/getsshkey
 
 
 # Git
