@@ -9,3 +9,5 @@
     editor = vim
 [github]
     user = C-Fergus
+[filter "remove-pass"]
+    clean = "sed -e 's/^password=.*/#password=TODO/'"
