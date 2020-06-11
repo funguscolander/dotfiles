@@ -1,17 +1,23 @@
 #!/usr/bin/bash
 
 if [[ $EUID -ne 0 ]]; then
-    echo "This script must be run as root" 
+    echo "This script requires root permissions" 
+    sudo "$0"
     exit 1
 fi
 
-sudo echo \
-"Change - PermitRootLogin no
-Add - AllowUsers yourusername
-Change - PasswordAuthentication yes
-Add - UsePrivilegeSeparation no
-Change - ListenAddress 0.0.0.0
-Change - Port 2200" \
->> /etc/ssh/sshd_config
+# The following method courtesy of MadeInGermany: https://www.unix.com/302815861-post7.html
+
+file=/etc/ssh/sshd_config
+cp -p $file $file.old &&
+sudo awk '
+$1=="PermitRootLogin" {$2="no"}
+$1=="AllowUsers" {$2="fergus"}
+$1=="PasswordAuthetication" {$2="yes"}
+$1=="UsePrivilegSeparation" {$2="no"}
+$1=="ListenAddress" {$2="0.0.0.0"}
+$1=="Port" {$2="2200"}
+{print}
+' $file.old > $file
 
 sudo service ssh --full-restart
