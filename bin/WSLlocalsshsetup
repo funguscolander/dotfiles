@@ -6,18 +6,34 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# The following method courtesy of MadeInGermany: https://www.unix.com/302815861-post7.html
+options=(
+    PermitRootLogin
+    AllowUsers
+    PasswordAuthentication
+    UsePrivilegeSeparation
+    ListenAddress
+    Port
+)
 
 file=/etc/ssh/sshd_config
-cp -p $file $file.old &&
-sudo awk '
+
+for i in "${options[@]}"; do
+    if grep -F $file "${i##*/}" = false; then
+        echo "${i##*/}" | sudo dd of=$file oflag=append conv=notrunc
+    fi
+done
+
+# Edit existing OpenSSH options. Courtesy of MadeInGermany https://www.unix.com/302815861-post7.html
+
+sudo cp -p $file $file.old &&
+awk '
 $1=="PermitRootLogin" {$2="no"}
 $1=="AllowUsers" {$2="fergus"}
-$1=="PasswordAuthetication" {$2="yes"}
-$1=="UsePrivilegSeparation" {$2="no"}
+$1=="PasswordAuthentication" {$2="yes"}
+$1=="UsePrivilegeSeparation" {$2="no"}
 $1=="ListenAddress" {$2="0.0.0.0"}
 $1=="Port" {$2="2200"}
 {print}
-' $file.old > $file
+' $file.old | sudo dd of=$file status=none
 
 sudo service ssh --full-restart
