@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
 ## tmuxlatex
-# Tmux template for LaTeX
+# Tmux template for LaTeX. See https://minimul.com/increased-developer-productivity-with-tmux-part-4.html for help.
 
 SESSION=`basename $PWD`
 
+tmux -2 new-session -d -s $SESSION
+
+tmux rename-window -t $SESSION:1 $SESSION
+tmux split-window -h
 
