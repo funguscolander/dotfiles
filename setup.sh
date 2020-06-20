@@ -11,9 +11,6 @@ main() {
   # Symbolic link files
   bash symlink.sh
 
-  # Copy BINARIES
-  ln -svf $HOME/dotfiles/bin $HOME/.local
-
   declare -a BINARIES=(
     'cleantex'
     'getsshkey'
