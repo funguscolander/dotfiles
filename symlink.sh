@@ -23,7 +23,7 @@ main() {
 
   for i in ${DOTFILES[@]}; do
     echo "Creating a symbolic link for ${i##*/} in \$HOME"
-    ln -svf ${i##*/} $HOME
+    ln -svf dotfiles/${i##*/} $HOME
   done
 
   unset DOTFILES
@@ -31,7 +31,7 @@ main() {
 
   ## Binaries
   echo "Creating a symbolic link to the binaries directory in \$HOME/.local/bin"
-  ln -svf bin $HOME/.local
+  ln -svf ../dotfiles/bin $HOME/.local
 
 }
 
