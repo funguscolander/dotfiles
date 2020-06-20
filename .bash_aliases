@@ -1,8 +1,8 @@
 ## Git
 # Initialisation & cloning
 alias ginit='git init'
-gcl () { git clone "$1" "$2" ; }														# Clone a repo. Take repo URL and a directory as input.
-mygcl () { git clone git@github.com:C-Fergus/"$1".git ; }							# Clone my repo. Takes repo name as input.
+gcl () { git clone "${1}" "${2}" ; }														# Clone a repo. Take repo URL and a directory as input.
+mygcl () { git clone git@github.com:C-Fergus/"${1}".git ; }							# Clone my repo. Takes repo name as input.
 
 # Repository
 alias gs='git status'
