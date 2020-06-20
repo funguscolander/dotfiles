@@ -37,7 +37,7 @@
 
 # Shell scripts
 !setup.sh
-!sync.sh
+!symlink.sh
 
 
 # Key rebindings
