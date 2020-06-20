@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+## cleantex
+# Removes intermediary LaTeX build files so that the next build will be from scratch
+
+rm *.aux *.bbl *.blg *.fls *toc*.out*.glo *.log
+

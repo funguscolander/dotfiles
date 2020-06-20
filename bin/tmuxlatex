@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## tmuxlatex
+# Tmux template for LaTeX
+
+SESSION=`basename $PWD`
+
+
