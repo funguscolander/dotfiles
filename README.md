@@ -21,6 +21,6 @@ Alternatively, the files can pulled directly into a repo in the home directory u
     git init && \
     git remote add origin https://github.com/C-Fergus/dotfiles.git && \
     git pull origin master && \
-    bash aptgetInstall.sh
+    bash setup.sh
 
 This will pull the repo directly into ~ allowing them to be used immediately, as well as running the installation script.
