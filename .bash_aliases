@@ -9,7 +9,7 @@ alias gs='git status'
 alias ga='git add' 
 alias ga.='git add .'
 alias gc='git commit'
-gcm () { git commit -m "$1" ; }
+gcm () { git commit -m "${1}" ; }
 alias gd='git diff'
 alias gk='gitk --all&'
 alias gpl='git pull'
