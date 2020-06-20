@@ -12,6 +12,7 @@ alias gc='git commit'
 gcm () { git commit -m "$1" ; }
 alias gd='git diff'
 alias gk='gitk --all&'
+alias gpl='git pull'
 alias gp='git push'
 alias gpom='git push origin master'
 alias gb='git branch'
