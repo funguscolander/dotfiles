@@ -40,12 +40,13 @@
 !symlink.sh
 
 
-# Key rebindings
-!.Xmodmap
+# Tmux
+!.tmux.conf
 
 
 # Vim
 !.vimrc
 
-# XTerminal
+# X
+!.Xmodmap
 !.Xresources
