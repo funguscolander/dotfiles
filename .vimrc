@@ -7,11 +7,14 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+Plugin 'scrooloose/nerdtree'
+Plugin 'dbeniamine/todo.txt-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'honza/vim-snippets'
+Plugin 'lervag/vimtex'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'lervag/vimtex'
-Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
 
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 " All of your Plugins must be added before the following line
