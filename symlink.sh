@@ -18,6 +18,7 @@ main() {
     '.profile'
     '.tmux.conf'
     '.vimrc'
+    '.xinitrc'
     '.Xmodmap'
     '.Xresources'
   )
