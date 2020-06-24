@@ -13,6 +13,7 @@ alias ga='git add'
 alias ga.='git add .'
 alias gc='git commit'
 gcm () { git commit -m "${1}" ; }
+gcam () { git commit --amend -m "${1}" ; }
 alias gd='git diff'
 alias gk='gitk --all&'
 alias gpl='git pull'
