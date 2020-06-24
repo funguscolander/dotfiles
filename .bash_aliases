@@ -29,14 +29,15 @@ alias gut='git'
 ## Navigation
 # Bookmarks
 alias bin='cd ~/.local/bin/'
-alias dot='cd ~/dotfiles/'
 alias doc='cd ~/Documents/'
+alias dot='cd ~/dotfiles/'
 alias repo='cd ~/Documents/repositories/'
 alias repos='cd ~/Documents/repositories/'
 
 # Bookmark Typo Correction
 alias dic='cd ~/Documents/'
 alias dit='cd ~/dotfiles/'
+alias dor='cd ~/dotfiles/'
 alias repi='cd ~/Documents/repositories/'
 alias repis='cd ~/Documents/repositories/'
 
