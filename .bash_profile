@@ -2,3 +2,4 @@
 
 . "$HOME/.profile"
 [[ $- != *i* ]] || . "$HOME/.bashrc"
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
