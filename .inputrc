@@ -1,2 +1,36 @@
-include /etc/inputrc
+## .inputrc
+# My inputrc
+
+# Include default inputrc
+$include /etc/inputrc
+
+
+## Autocompletion
+# Appends slash to directories and symlinked directorires upon autocomplete
+set mark-directories on
+set mark-symlinked-directories on
+
+# Ignore case when autocompleting
+set completion-ignore-case on
+
+# Ignore keymap case (effectively makes hyphens and underscores interchangable)
+set completion-map-case on
+
+# Show completions after one tab instead of two
+#set show-all-if-ambiguous on
+#set show-all-if-unmodified on
+
+# Show completions unless there are over 9000
+set completion-query-items 9001
+
+# Show remainder of file names after autocompleting
+set completion-prefix-display-length 2
+
+
+## Keybinds
+# Vim
+set keymap vi
+set editing-mode vi
+Control-j: menu-complete
+Control-k: menu-complete-backward
 
