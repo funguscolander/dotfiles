@@ -1,3 +1,12 @@
 ! Set 256 colour mode
 XTerm.termName: xterm-256color
 
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! Disable left scroll bar
+URxvt*scrollBar: false
+
