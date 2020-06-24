@@ -23,6 +23,9 @@ set completion-map-case on
 # Show completions unless there are over 9000
 set completion-query-items 9001
 
+# Show possible completions in different colours to indicate their file type
+set colored-stats on
+
 # Show remainder of file names after autocompleting
 set completion-prefix-display-length 2
 

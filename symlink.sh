@@ -14,6 +14,7 @@ main() {
     '.bash_profile'
     '.bashrc'
     '.gitconfig'
+    '.inputrc'
     '.profile'
     '.tmux.conf'
     '.vimrc'
