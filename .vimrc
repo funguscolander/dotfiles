@@ -1,3 +1,4 @@
+"" Vundle Setup
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -12,6 +13,7 @@ Plugin 'dbeniamine/todo.txt-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'honza/vim-snippets'
 Plugin 'lervag/vimtex'
+Plugin 'christoomey/vim-tmux-navigator'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -31,6 +33,24 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+
+"" My vimrc
+" Stop tmux from unzooming pane when navigating over the edge of a vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
+
+" George Hotz
+syntax on
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set ai
+set number
+set hlsearch
+set ruler
+set paste
+set visualbell
+highlight Comment ctermfg=green
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
