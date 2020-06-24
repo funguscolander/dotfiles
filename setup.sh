@@ -8,7 +8,20 @@ main() {
 
   local i=''
 
-  # Symbolic link files
+  ## Package Managers
+  # Shell (Homebrew)
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+  ## Plugin Managers
+  # Tmux (Tmux Plugin Manager [TPM])
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+  # Vim (Vundle)
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
+  ## Symbolic link files
   bash symlink.sh
 
   declare -a BINARIES=(
@@ -24,9 +37,6 @@ main() {
   done
 
   unset BINARIES
-
-  # Set up VUNDLE
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 }
 
