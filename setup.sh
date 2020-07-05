@@ -24,16 +24,18 @@ main() {
   ## Symbolic link files
   bash symlink.sh
 
+  ## Make binaries executable
   declare -a BINARIES=(
     'cleantex'
     'getsshkey'
     'tmuxlatex'
+    'wgetfullsite'
     'WSLlocalsshsetup'
   )
 
   for i in ${BINARIES[@]}; do
     echo "Changing access permissions for binary script :: ${i##*/}"
-    chmod +rwx $HOME/bin/${i##*/}
+    chmod +rwx $HOME/.local/bin/${i##*/}
   done
 
   unset BINARIES

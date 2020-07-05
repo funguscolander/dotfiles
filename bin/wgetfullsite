@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+# --mirror \ # Download the whole site as a mirror
+# --page-requisits \ # Get all assets/elements (CSS/JS/images)
+# --adjust-extension \ # Save files with .html on the end
+# --span-hosts \ # Include necessary assets from offsite as well
+# --convert-links \ # Update links to still work in the static version
+# --restrict-file-names=windows \ # Modify filenames to work in Windows as well
+# --no-clobber \ # Do not overwrite existing files (resuming interrupted downloads will only download new files)
+# --continue \ # Continue getting a partially-downloaded file from a previous Wget
+# --wait=1 --random-wait \ # Circumvents request interval comparison robot blockers on websites
+# -e robots=off \ # Ignores robots.txt exclusions so the whole website is downloaded
+# --user-agent=Mozilla \ # Pretends to be Firefox and not Wget for websites that block robots
+# --no-hsts \ # Disable HTTP Strict Transport Security, an optional man-in-the-middle https security addon
+# --domains "$1" \ # Do not follow links outside this domain
+# --no-parent \ # Don't follow links outside the directory you pass in
+#   "$1" # The URL to download
+
+wget \
+    --mirror \
+    --page-requisites \
+    --adjust-extension \
+    --span-hosts \
+    --convert-links \
+    --restrict-file-names=windows \
+	--no-clobber \
+    --continue \
+	--wait=1 --random-wait \
+	-e robots=off \
+	--user-agent=Mozilla \
+    --no-hsts \
+    --domains "$1" \
+    --no-parent \
+		"$1"
+
