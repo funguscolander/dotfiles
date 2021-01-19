@@ -1,6 +1,18 @@
 ## .bash_aliases
 # My .bash_alises file. This also contains my bash functions as I do not want to separate the categories between two files, and both aliases and functions largely serve the same purpose for me as my larger functions are stored as binaries in `~/.local/bin/` instead.
 
+## Aplications
+# Browser
+alias start="explorer.exe"
+
+# Tmux
+tmuxn () { tmux new-session -s "${1}" ; }       # New Tmux session
+alias tmuxl='tmux list-sessions'                # List existing Tmux sessions
+tmuxa () { tmux a -t "${1}" ; }                 # Attach to existing Tmux session
+tmuxk () { tmux kill-session -t "${1}" ; }      # Kill existing Tmux session
+alias tmuxkserv='tmux kill-server'              # Kill all existing Tmux sessions
+
+
 ## Git
 # Initialisation & cloning
 alias ginit='git init'
@@ -50,13 +62,6 @@ alias .3='cd ../../../'                         # Go back 3 directory levels
 alias .4='cd ../../../../'                      # Go back 4 directory levels
 alias .5='cd ../../../../../'                   # Go back 5 directory levels
 alias .6='cd ../../../../../../'                # Go back 6 directory levels
-
-
-## Tmux
-tmuxn () { tmux new-session -s "${1}" ; }       # New Tmux session
-tmuxa () { tmux a -t "${1}" ; }                 # Attach to existing Tmux session
-tmuxk () { tmux kill-session -t "${1}" ; }      # Kill existing Tmux session
-alias tmuxkserv='tmux kill-server'              # Kill all existing Tmux sessions
 
 
 ## Utilities
