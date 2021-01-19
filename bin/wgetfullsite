@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+!/usr/bin/env bash
 
 # --mirror \ # Download the whole site as a mirror
 # --page-requisits \ # Get all assets/elements (CSS/JS/images)
@@ -23,11 +23,10 @@ wget \
     --span-hosts \
     --convert-links \
     --restrict-file-names=windows \
-	--no-clobber \
+    --no-clobber \
     --continue \
-	--wait=1 --random-wait \
-	-e robots=off \
-	--user-agent=Mozilla \
+	  -e robots=off \
+	  --user-agent=Mozilla \
     --no-hsts \
     --domains "$1" \
     --no-parent \
