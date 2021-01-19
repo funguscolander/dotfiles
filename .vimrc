@@ -8,12 +8,16 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'dbeniamine/todo.txt-vim'
+Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
+Plugin 'morhetz/gruvbox'
+Plugin 'pangloss/vim-javascript'
+Plugin 'NikolayFrantsev/jshint2.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'honza/vim-snippets'
-Plugin 'lervag/vimtex'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'dbeniamine/todo.txt-vim'
+Plugin 'lervag/vimtex'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -35,11 +39,24 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-"" My vimrc
+
+"""""""""""""
+"" My vimrc""
+"""""""""""""
+"" Theme
+autocmd vimenter * colorscheme gruvbox      " Makes the theme load after vim is finished reading the .vimrc
+let g:gruvbox_contrast_dark='hard'            " Higher contrast theme
+
+
+"" Plugin vim-tmux-navigator
 " Stop tmux from unzooming pane when navigating over the edge of a vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
 
-" George Hotz
+
+
+""""""""""""""""
+"" George Hotz""
+""""""""""""""""
 syntax on
 set tabstop=2
 set shiftwidth=2
@@ -236,7 +253,7 @@ set smarttab
 
 " 1 tab == 4 spaces
 set shiftwidth=4
-set tabstop=4
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -259,10 +276,6 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <C-space> ?
-
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
