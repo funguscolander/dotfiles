@@ -35,6 +35,10 @@ main() {
   echo "Creating a symbolic link to the binaries directory in \$HOME/.local/bin"
   ln -svf ../dotfiles/bin $HOME/.local
 
+  ## Xresources
+  echo "Creating a symbolic link to the Xresources directory in \$HOME/.Xresources.d"
+  ln -svf dotfiles/.Xresources.d $HOME
+
 }
 
 main
