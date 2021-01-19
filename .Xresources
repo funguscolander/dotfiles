@@ -1,12 +1,35 @@
-! Set 256 colour mode
-XTerm.termName: xterm-256color
+! .Xresources
+! My .Xresources file
 
-! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+#define background_opacity 100
+#include ".Xresources.d/windows-NT-256.Xresources"
+
+! Set 256 colour mode
+!XTerm.termName: xterm-256color
+XTerm.termName: rxvt-unicode
+
+! Scroll in relation to buffer (with mouse scroll or Shift+Page Up)
 URxvt*scrollWithBuffer: true
 
-! scroll back to the bottom on keypress
+! Scroll back to the bottom on keypress
 URxvt*scrollTtyKeypress: true
 
 ! Disable left scroll bar
 URxvt*scrollBar: false
+
+! Set history save limit
+URxvt*saveLines: 5000
+
+! Enable window transparency
+! Enable true transparency
+!URxvt*depth: 32
+
+! Enable native transparency (lower resource usage)
+!URxvt*inheritPixmap: true
+!URxvt*transparent: true
+
+! Set opacity
+!URxvt*background: [background_opacity]base00
+
+URxvt*borderless: 1
 
