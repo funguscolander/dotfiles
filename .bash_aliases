@@ -1,7 +1,7 @@
 ## .bash_aliases
 # My .bash_alises file. This also contains my bash functions as I do not want to separate the categories between two files, and both aliases and functions largely serve the same purpose for me as my larger functions are stored as binaries in `~/.local/bin/` instead.
 
-## Aplications
+## Applications
 # Browser
 alias start="explorer.exe"
 
