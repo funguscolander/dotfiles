@@ -16,6 +16,7 @@ alias tmuxkserv='tmux kill-server'              # Kill all existing Tmux session
 ## Git
 # Initialisation & cloning
 alias ginit='git init'
+alias gi='git init'
 gcl () { git clone "${1}" "${2}" ; }                        # Clone a repo. Take repo URL and a directory as input.
 mygcl () { git clone git@github.com:C-Fergus/"${1}".git ; } # Clone my repo. Takes repo name as input.
 
@@ -43,6 +44,7 @@ alias gut='git'
 alias bin='cd ~/.local/bin/'
 alias doc='cd ~/Documents/'
 alias dot='cd ~/dotfiles/'
+alias home='cd ~'
 alias repo='cd ~/Documents/repositories/'
 alias repos='cd ~/Documents/repositories/'
 
@@ -54,20 +56,6 @@ alias repi='cd ~/Documents/repositories/'
 alias repis='cd ~/Documents/repositories/'
 
 # Directory navigation
-cd() { builtin cd "$@"; ll; }                   # Always list directory contents upon 'cd' to $HOME
-alias cd..='cd ../'                             # Go back 1 directory level
-alias ..='cd ../'                               # Go back 1 directory level
-alias ...='cd ../../'                           # Go back 2 directory levels
-alias .3='cd ../../../'                         # Go back 3 directory levels
-alias .4='cd ../../../../'                      # Go back 4 directory levels
-alias .5='cd ../../../../../'                   # Go back 5 directory levels
-alias .6='cd ../../../../../../'                # Go back 6 directory levels
-
-
-## Utilities
-# Calculator
-alias bc='bc -l'                                # Calculator with mathlib support
-
 # File listing
 alias ll='ls -alh --time-style long-iso'        # List files
 alias llr='ls -alhr --time-style long-iso'      # List files (reverse)
@@ -83,3 +71,17 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 
+# Navigation
+cd() { builtin cd "$@"; ll; }                   # Always list directory contents upon 'cd' to $HOME
+alias cd..='cd ../'                             # Go back 1 directory level
+alias ..='cd ../'                               # Go back 1 directory level
+alias ...='cd ../../'                           # Go back 2 directory levels
+alias .3='cd ../../../'                         # Go back 3 directory levels
+alias .4='cd ../../../../'                      # Go back 4 directory levels
+alias .5='cd ../../../../../'                   # Go back 5 directory levels
+alias .6='cd ../../../../../../'                # Go back 6 directory levels
+
+
+## Utilities
+# Calculator
+alias bc='bc -l'                                # Calculator with mathlib support
