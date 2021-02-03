@@ -6,54 +6,47 @@
 alias start="explorer.exe"
 
 # Tmux
-tmuxn () { tmux new-session -s "${1}" ; }       # New Tmux session
+tmuxn() { tmux new-session -s "${1}" ; }       # New Tmux session
 alias tmuxl='tmux list-sessions'                # List existing Tmux sessions
-tmuxa () { tmux a -t "${1}" ; }                 # Attach to existing Tmux session
-tmuxk () { tmux kill-session -t "${1}" ; }      # Kill existing Tmux session
-alias tmuxkserv='tmux kill-server'              # Kill all existing Tmux sessions
+tmuxa() { tmux a -t "${1}" ; }                 # Attach to existing Tmux session
+tmuxk() { tmux kill-session -t "${1}" ; }      # Kill existing Tmux session
+alias {tmuxks,tmuxkserv}='tmux kill-server'              # Kill all existing Tmux sessions
 
 
 ## Git
 # Initialisation & cloning
-alias ginit='git init'
-alias gi='git init'
-gcl () { git clone "${1}" "${2}" ; }                        # Clone a repo. Take repo URL and a directory as input.
-mygcl () { git clone git@github.com:C-Fergus/"${1}".git ; } # Clone my repo. Takes repo name as input.
+alias {gi,giti,ginit}='git init'
+gcl() { git clone "${1}" "${2}" ; }                        # Clone a repo. Take repo URL and a directory as input.
+gitcl() { git clone "${1}" "${2}" ; }
+mygcl() { git clone git@github.com:C-Fergus/"${1}".git ; } # Clone my repo. Takes repo name as input.
+mygitcl() { git clone git@github.com:C-Fergus/"${1}".git ; }
 
 # Repository
-alias gs='git status'
-alias ga='git add' 
-alias ga.='git add .'
-alias gc='git commit'
-gcm () { git commit -m "${1}" ; }
-gcam () { git commit --amend -m "${1}" ; }
-alias gd='git diff'
-alias gk='gitk --all&'
-alias gpl='git pull'
-alias gp='git push'
-alias gpom='git push origin master'
-alias gb='git branch'
+alias {gs,gits}='git status'
+alias {ga,gita}='git add' 
+alias {ga.,gita.}='git add .'
+alias {gc,gitc}='git commit'
+gcm() { git commit -m "${1}" ; }
+gitcm() { git commit -m "${1}" ; }
+gcam() { git commit --amend -m "${1}" ; }
+gitcam() { git commit --amend -m "${1}" ; }
+alias {gd,gitd}='git diff'
+alias {gk,gitk}='gitk --all&'
+alias {gpl,gitpl}='git pull'
+alias {gp,gitp}='git push'
+alias {gpom,gitpom}='git push origin master'
+alias {gb,gitb}='git branch'
 
 # Typo correction
-alias got='git'
-alias gut='git'
+alias {got,gut}='git'
 
 
 ## Navigation
 # Bookmarks
-alias bin='cd ~/.local/bin/'
-alias doc='cd ~/Documents/'
-alias dot='cd ~/dotfiles/'
-alias home='cd ~'
-alias repo='cd ~/Documents/repositories/'
-alias repos='cd ~/Documents/repositories/'
-
-# Bookmark Typo Correction
-alias dic='cd ~/Documents/'
-alias dit='cd ~/dotfiles/'
-alias dor='cd ~/dotfiles/'
-alias repi='cd ~/Documents/repositories/'
-alias repis='cd ~/Documents/repositories/'
+alias {bin,bun,bon}='cd ~/.local/bin/'
+alias {doc,dic}='cd ~/Documents/'
+alias {dot,dit,dor}='cd ~/dotfiles/'
+alias {repo,repos,repi,repis}='cd ~/Documents/repositories/'
 
 # Directory navigation
 # File listing
