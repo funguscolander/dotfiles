@@ -2,7 +2,7 @@
 ! My .Xresources file
 
 #define background_opacity 100
-#include ".Xresources.d/windows-NT-256.Xresources"
+#include ".Xresources.d/95-256-True.Xresources"
 
 ! Set 256 colour mode
 !XTerm.termName: xterm-256color
@@ -32,4 +32,9 @@ URxvt*saveLines: 5000
 !URxvt*background: [background_opacity]base00
 
 URxvt*borderless: 1
+URxvt*font: xft:consolas:style=Regular:size=10:antialias=true
+URxvt*boldFont: xft:consolas:style=Bold:size=10:antialias=true
+URxvt*italicFont: xft:consolas:style=Italic:size=10:antialias=true
+URxvt*boldItalicFont: xft:consolas:style=Bold Italic:size=10:antialias=true
+URxvt*letterSpace: -1
 
