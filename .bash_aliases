@@ -53,21 +53,7 @@ alias dor='cd ~/dotfiles/'
 alias repi='cd ~/Documents/repositories/'
 alias repis='cd ~/Documents/repositories/'
 
-# Directory navigation
-cd() { builtin cd "$@"; ll; }                   # Always list directory contents upon 'cd' to $HOME
-alias cd..='cd ../'                             # Go back 1 directory level
-alias ..='cd ../'                               # Go back 1 directory level
-alias ...='cd ../../'                           # Go back 2 directory levels
-alias .3='cd ../../../'                         # Go back 3 directory levels
-alias .4='cd ../../../../'                      # Go back 4 directory levels
-alias .5='cd ../../../../../'                   # Go back 5 directory levels
-alias .6='cd ../../../../../../'                # Go back 6 directory levels
-
-
-## Utilities
-# Calculator
-alias bc='bc -l'                                # Calculator with mathlib support
-
+## Directory navigation
 # File listing
 alias ll='ls -alh --time-style long-iso'        # List files
 alias llr='ls -alhr --time-style long-iso'      # List files (reverse)
@@ -82,4 +68,20 @@ alias lldcr='ls -alhtUr --time-style long-iso'  # List files by date created (re
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
+
+# Navigation
+cd() { builtin cd "$@"; ll; }                   # Always list directory contents upon 'cd' to $HOME
+alias cd..='cd ../'                             # Go back 1 directory level
+alias ..='cd ../'                               # Go back 1 directory level
+alias ...='cd ../../'                           # Go back 2 directory levels
+alias .3='cd ../../../'                         # Go back 3 directory levels
+alias .4='cd ../../../../'                      # Go back 4 directory levels
+alias .5='cd ../../../../../'                   # Go back 5 directory levels
+alias .6='cd ../../../../../../'                # Go back 6 directory levels
+
+
+## Utilities
+# Calculator
+alias bc='bc -l'                                # Calculator with mathlib support
+
 
