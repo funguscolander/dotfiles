@@ -119,7 +119,7 @@ if ! shopt -oq posix; then
 fi
 
 # make html files and links open up in the default browser for Windows in WSL through explorer.exe
-export BROWSER="explorer.exe"
+# export BROWSER="explorer.exe"
 
 # define WSL xserver display
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
