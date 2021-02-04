@@ -1,22 +1,22 @@
-! Windows NT (2000, XP, Vista, 7, 8, 10 (at launch))
+! Windows NT Light
 ! Maintainer: Fergus Collins
 
-#define base00 #000000
-#define base01 #000080
-#define base02 #008000
-#define base03 #008080
-#define base04 #800000
-#define base05 #800080
-#define base06 #808000
-#define base07 #c0c0c0
-#define base08 #808080
-#define base09 #0000ff
-#define base0A #00ff00
-#define base0B #00ffff
-#define base0C #ff0000
-#define base0D #ff00ff
-#define base0E #ffff00
-#define base0F #ffffff
+#define base00 #ffffff
+#define base01 #ff00ff
+#define base02 #00ffff
+#define base03 #c0c0c0
+#define base04 #0000ff
+#define base05 #808080
+#define base06 #ff0000
+#define base07 #000000
+#define base08 #800000
+#define base09 #ffff00
+#define base0A #808000
+#define base0B #008000
+#define base0C #008080
+#define base0D #000080
+#define base0E #800080
+#define base0F #00ff00
 
 *foreground:   base05
 #ifdef background_opacity

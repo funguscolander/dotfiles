@@ -1,0 +1,54 @@
+! Windows 10 Light
+! Maintainer: Fergus Collins
+
+#define base00 #f2f2f2
+#define base01 #e74856
+#define base02 #16c60c
+#define base03 #f9f1a5
+#define base04 #3b78ff
+#define base05 #b4009e
+#define base06 #61d6d6
+#define base07 #767676
+#define base08 #cccccc
+#define base09 #cf0f1f
+#define base0A #13a10e
+#define base0B #c19c00
+#define base0C #0037da
+#define base0D #881798
+#define base0E #3a96dd
+#define base0F #0c0c0c
+
+*foreground:   base07
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base0F
+
+*color0:       base00
+*color1:       base01
+*color2:       base02
+*color3:       base03
+*color4:       base04
+*color5:       base05
+*color6:       base06
+*color7:       base07
+
+*color8:       base08
+*color9:       base09
+*color10:      base0A
+*color11:      base0B
+*color12:      base0C
+*color13:      base0D
+*color14:      base0E
+*color15:      base0F
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06

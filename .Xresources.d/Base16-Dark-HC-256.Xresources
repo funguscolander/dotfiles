@@ -1,22 +1,22 @@
-! Base16 3024
-! Scheme: Jan T. Sott (http://github.com/idleberg)
+! Windows HC
+! Maintainer: Fergus Collins
 
-#define base00 #090300
-#define base01 #3a3432
-#define base02 #4a4543
-#define base03 #5c5855
-#define base04 #807d7c
-#define base05 #a5a2a2
-#define base06 #d6d5d4
-#define base07 #f7f7f7
-#define base08 #db2d20
-#define base09 #e8bbd0
-#define base0A #fded02
-#define base0B #01a252
-#define base0C #b5e4f4
-#define base0D #01a0e4
-#define base0E #a16a94
-#define base0F #cdab53
+#define base00 #000000
+#define base01 #800080
+#define base02 #008080
+#define base03 #545454
+#define base04 #000080
+#define base05 #c0c0c0
+#define base06 #800000
+#define base07 #fcfcfc
+#define base08 #fc5454
+#define base09 #808000
+#define base0A #fcfc54
+#define base0B #54fc54
+#define base0C #54fcfc
+#define base0D #5454fc
+#define base0E #fc54fc
+#define base0F #008000
 
 *foreground:   base05
 #ifdef background_opacity
