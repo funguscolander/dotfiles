@@ -1,22 +1,22 @@
-! Windows 10
+! Windows HC Light
 ! Maintainer: Fergus Collins
 
-#define base00 #0c0c0c
-#define base01 #0037da
-#define base02 #13a10e
-#define base03 #3a96dd
-#define base04 #c50f1e
-#define base05 #881798
-#define base06 #c19c00
-#define base07 #cccccc
-#define base08 #767676
-#define base09 #3b78ff
-#define base0A #16c60c
-#define base0B #61d6d6
-#define base0C #e74856
-#define base0D #b4009e
-#define base0E #f9f1a5
-#define base0F #f2f2f2
+#define base00 #fcfcfc
+#define base01 #fc54fc
+#define base02 #54fcfc
+#define base03 #c0c0c0
+#define base04 #5454fc
+#define base05 #545454
+#define base06 #fc5454
+#define base07 #000000
+#define base08 #800000
+#define base09 #fcfc54
+#define base0A #808000
+#define base0B #008000
+#define base0C #008080
+#define base0D #000080
+#define base0E #800080
+#define base0F #54fc54
 
 *foreground:   base05
 #ifdef background_opacity
