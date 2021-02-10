@@ -3,7 +3,7 @@
 
 ## Applications
 # Browser
-alias start="explorer.exe"
+# alias start="explorer.exe"
 
 # Tmux
 tmuxn() { tmux new-session -s "${1}" ; }       # New Tmux session
