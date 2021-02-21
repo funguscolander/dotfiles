@@ -102,9 +102,9 @@ set sidescrolloff=5     " keep 5 characters of context between the cursor and th
 set showmatch           " show matching brackets
 
 " change cursor style depending on mode
-let &t=EI = "\<Esc>[2 q"  " normal mode 1 is blinking box, 2 is non-blinking
-let &t=SR = "\<Esc>[3 q"  " reaplce mode 3 is blinking underline, 4 is non-blinking
-let &t=SI = "\<Esc>[5 q"  " insert mode 5 is blinking line
+let &t_EI = "\<Esc>[2 q"  " normal mode 1 is blinking box, 2 is non-blinking
+let &t_SR = "\<Esc>[3 q"  " reaplce mode 3 is blinking underline, 4 is non-blinking
+let &t_SI = "\<Esc>[5 q"  " insert mode 5 is blinking line
 
 " when the terminal has colors or when using the GUI (which always has colors) and when compiled with syntax
 if &t_Co > 2 || has("gui_running") && has('syntax') && !exists('g:syntax_on')
@@ -122,6 +122,10 @@ set formatoptions-=t    " wrap text at textwidth without inserting a line break
 set hidden              " hides a buffer when abandoned instead of unloading them
 "set textwidth=80        " max textwidth, a longer line will be broken after white space to get this width
 set updatetime=100      " write to swap file after 100 ms of inactivity (default 4000)
+
+if has('reltime')
+  set incsearch         " do incremental searching when it's possible to timeout.
+endif
 
 
 "" GVim
@@ -224,9 +228,12 @@ nnoremap <leader>zz :call VCenterCursor()<CR>
 inoremap <C-U> <C-G>u<C-U>
 
 "" Diff original and edited file
+" https://vimdoc.sourceforge.net/htmldoc/diff.html#:DiffOrig
 " see the difference between the current buffer and the file it was loaded from, thus the changes you made.
-command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+        \ | wincmd p | diffthis
+endif
 
 "" Filetype configuration
 " https://stackoverflow.com/a/52156757/13734567
@@ -269,19 +276,15 @@ if has ("autocmd")
   augroup END
   
   "" Jump to last known cursor position on file load
-  " when editing a file, always jump to the last known cursor position. don't do it when the position is invalid, when inside an event handler (happens when dropping a file on gvim) and for a commit message (it's likely a different one than last time).
+  " when editing a file, always jump to the last known cursor position
+  " don't do it when the position is invalid, when inside an event handler (happens when dropping a file on gvim),
+  " and for a commit message (it's likely a different one than last time)
   augroup LastKnownPosition
+    autocmd!
     autocmd BufReadPost *
           \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
           \ |   exe "normal! g`\""
           \ | endif
   augroup END
 endif
-
-"" Incremental search
-" do incremental searching when it's possible to timeout.
-if has('reltime')
-  set incsearch
-endif
-
 
