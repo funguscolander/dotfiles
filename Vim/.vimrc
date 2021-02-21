@@ -3,6 +3,7 @@
 """"""""""""""""""""""""""""
 " Compatibility & Security "
 """"""""""""""""""""""""""""
+
 "" Vi compatibility
 " use Vim settings, rather than Vi settings.
 " this must be first, because it changes other options as a side effect.
@@ -18,7 +19,7 @@ silent! while 0
 silent! endwhile
 
 "" Secure temporary files location
-" move temporary files to a secure location to protect against CVE-2017-1000382
+" move swap files to a secure location to protect against CVE-2017-1000382
 if exists('$XDG_CACHE_HOME')
   let &g:directory=$XDG_CACHE_HOME
 else
@@ -28,7 +29,6 @@ endif
 "" Put all Vim undo, backup, and swap files in a single directory
 let &g:undodir=&g:directory . '/vim/undo//'
 let &g:backupdir=&g:directory . '/vim/backup//'
-let &g:directory.='/vim/swap//'
 
 " Create the directories if they doesn't exist
 if ! isdirectory(expand(&g:directory))
@@ -82,10 +82,11 @@ endif
 
 "" Commands & Keycodes
 set history=9001        " keep over 9000 lines of command line history
-set noesckeys           " no delay using `<Esc>` to exit insert mode
+"set noesckeys           " no delay using `<Esc>` to exit insert mode (only 10ms w/ arrow keys with 3 commands below)
+set notimeout           " do not timeout on :mappings
+set ttimeout            " timeout on key codes
+set ttimeoutlen=10      " wait 10 ms before sending matched keycode if there are longer codes with the same beginning
 set showcmd             " show incomplete commands
-set ttimeout            " timeout for key codes
-set ttimeoutlen=100     " wait up to 100 ms after final key of keycode if there are logner keycodes which match what has been pressed so far
 set wildmenu            " display completion matches in status line
 set wildignorecase      " ignore case in wildmenu search
 set wildmode=list:longest,full  " first tab shows list of completions with the longest one being completed, second tab opens the full wildmenu with all previously shown completions
@@ -100,6 +101,8 @@ set ruler               " show the cursor position all the time
 set scrolloff=5         " keep 5 lines of context between the cursor and the edge of the screen
 set sidescrolloff=5     " keep 5 characters of context between the cursor and the edge of the screen
 set showmatch           " show matching brackets
+set wrap                " visually wrap lines longer than the width of the screen
+set linebreak           " use with `wrap`: break lines at word boundaries (see `breakat`) instead of last character
 
 " change cursor style depending on mode
 let &t_EI = "\<Esc>[2 q"  " normal mode 1 is blinking box, 2 is non-blinking
@@ -117,8 +120,12 @@ endif
 set autoread            " re-read files changed outside of vim but not changed in vim
 set autowrite           " save before commands like :next and :make are run
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+set complete=.,w,b,u,t  " enable insert mode variable autocomplete: `<C-P>` forward, `<C-N>` backward; and
+                        " scan only all loaded and unloaded buffers for autocomplete
+set completeopt=longest,menuone " complete longest common match, always display menu, use <C-L> to add more characters
+                                " TODO: Look more at `completeopt`, there are other good options
 set encoding=utf-8      " recommended enconding format, though can create differences between GUI and terminal vim
-set formatoptions-=t    " wrap text at textwidth without inserting a line break
+set formatoptions-=t    " don't insert a line break when auto wrapping text at textwidth
 set hidden              " hides a buffer when abandoned instead of unloading them
 "set textwidth=80        " max textwidth, a longer line will be broken after white space to get this width
 set updatetime=100      " write to swap file after 100 ms of inactivity (default 4000)
@@ -146,8 +153,9 @@ set expandtab           " use spaces instead of the tab character
 set softtabstop=4       " number of characters upon tab press
 set shiftwidth=4        " each `>>` indents a line by 4 characters
 set tabstop=4           " number of characters taken up by a tab character
+set shiftround          " round indent to multiple of `shiftwidth`
 set smarttab            " add and remove tabs when you `<TAB>` and`<BP>`
-"set complete
+
 
 
 "" Search
@@ -155,7 +163,7 @@ set ignorecase          " ignore case in patterns
 set smartcase           " unignore case when capital letters are used
 
 
-"" Windows
+"" Window
 set splitbelow          " place new window in a horizontal split below the current window
 set splitright          " place new window in a vertical split to the right of the current window
 
