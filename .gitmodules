@@ -1,0 +1,3 @@
+[submodule "spinks/vim-leader-guide"]
+    path = "Vim/.vim/pack/staging/help/start/vim-leader-guide"
+    url  = "https://github.com/spinks/vim-leader/guide.git"
