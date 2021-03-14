@@ -1,0 +1,4 @@
+--ignore=/README\.md/
+--no-folding
+--target=$HOME
+--verbose

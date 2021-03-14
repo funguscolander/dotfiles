@@ -1,0 +1,39 @@
+[submodule "aur/yay"]
+	path = Yay
+	url = https://aur.archlinux.org/yay.git
+[submodule "tmux-plugins/tpm"]
+	path = tmux/.config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "junegunn/goyo.vim"]
+	path = Vim/.vim/pack/usage/start/goyo
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "tpope/vim-eunuch"]
+	path = Vim/.vim/pack/tpope/start/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "tpope/vim-fugitive"]
+	path = Vim/.vim/pack/tpope/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "tpope/vim-obsession"]
+	path = Vim/.vim/pack/tpope/start/obsession
+	url = https://github.com/tpope/vim-obsession.git
+[submodule "tpope/vim-surround"]
+	path = Vim/.vim/pack/tpope/start/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "easymotion/vim-easymotion"]
+	path = Vim/.vim/pack/usage/start/easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "junegunn/vim-easy-align"]
+	path = Vim/.vim/pack/editing/start/easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "christoomey/vim-tmux-navigator"]
+	path = Vim/.vim/pack/usage/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "lifepillar/vim-solarized8"]
+	path = Vim/.vim/pack/colorschemes/start/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule "mhinz/vim-startify"]
+	path = Vim/.vim/pack/usage/start/vim-startify
+	url = https://github.com/mhinz/vim-startify.git
+[submodule "lervag/wiki.vim"]
+	path = Vim/.vim/pack/organisation/start/wiki.vim
+	url = https://github.com/lervag/wiki.vim.git
